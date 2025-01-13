@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .item::before {
+        content: '1111';
+        color: orange;
+      }
+
+      .item::after {
+        content: url('../0-images/hot_icon.svg');
+        font-size: 20px;
+        color: green;
+
+        /* 相对定位 */
+        position: relative;
+        left: 5px;
+        top: 2px;
+      }
+
+      /* ::after是行内及元素 */
+      .box5::after {
+        /* content不能省略 */
+        content: '';
+        width: 16px;
+        height: 16px;
+        position: relative;
+        top: 2px;
+        left: 5px;
+        display: inline-block;
+        background-color: #f00;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box3 item">我是box3元素</div>
+    <div class="box4 item">我是box4元素</div>
+
+    <div class="box5">我是box5元素</div>
+  </body>
+</html>

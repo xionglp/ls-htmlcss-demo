@@ -1,0 +1,71 @@
+// less 兼容css
+.box {
+  width: 200px;
+  height: 100px;
+  background-color: orange;
+  color: #fff;
+  font-size: 20px;
+}
+
+//定义变量
+@mainColor: #a40011;
+
+@smallFontSize: 12px;
+@normalFontSize: 14px;
+@bigFontSize: 18px;
+
+// .box1 .pel {
+//   color: @mainColor;
+//   font-size: @normalFontSize;
+// }
+
+// .box1 p .link {
+//   color: @mainColor;
+//   font-size: @smallFontSize;
+// }
+
+//less 可以嵌套
+.box1 {
+  .pel {
+    color: @mainColor;
+    font-size: @smallFontSize;
+  }
+
+  h1 {
+    .keyword {
+      color: @mainColor;
+      font-size: @bigFontSize;
+    }
+  }
+
+  p {
+    a.link {
+      color: @mainColor;
+      font-size: @normalFontSize;
+      // background-color: #0f0;
+
+      // & 表示当前选择器的父级
+      &:hover {
+        color: #f00;
+      }
+    }
+  }
+}
+
+.list {
+  .item {
+    font-size: 30px;
+
+    &:hover {
+      color: @mainColor;
+    }
+
+    &:nth-child(1) {
+      color: orange;
+    }
+
+    &:nth-child(2) {
+      color: purple;
+    }
+  }
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 
+        1.由于浮动元素脱离标准流，变成拖标元素，所以不再向父元素汇报高度；
+        2.父元素计算高度时，就不会计算浮动子元素的高度，导致高度塌陷的问题；
+        3.解决高度塌陷的方法，清除浮动， clear: both
+      */
+      .container {
+        width: 1190px;
+        margin: 0 auto;
+        background-color: antiquewhite;
+        /* height: 800px; */
+      }
+
+      .wrapper {
+        margin-right: -10px;
+      }
+
+      .item {
+        width: 290px;
+        background-color: orange;
+        margin-bottom: 10px;
+        float: left;
+        margin-right: 10px;
+      }
+
+      /* 交集选择器 */
+      .item.left {
+        height: 370px;
+      }
+
+      .item.right {
+        height: 180px;
+      }
+
+      /* .line {
+        background-color: #f00;
+        height: 10px;
+        clear: both;
+      } */
+
+      .clear_fix::after {
+        content: '';
+        /* 清除浮动clear: both */
+        clear: both;
+        display: block;
+
+        /* 浏览器兼容 */
+        visibility: hidden;
+        height: 0;
+      }
+
+      /* .clear_fix {
+        *zoom: 1;
+      } */
+
+      .other {
+        height: 100px;
+        background-color: #0f0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrapper clear_fix">
+        <div class="item left"></div>
+        <div class="item left"></div>
+        <div class="item right"></div>
+        <div class="item right"></div>
+        <div class="item right"></div>
+        <div class="item right"></div>
+
+        <!-- <div class="line"></div> -->
+      </div>
+    </div>
+
+    <div class="other"></div>
+  </body>
+</html>

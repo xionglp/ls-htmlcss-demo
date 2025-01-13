@@ -1,0 +1,17 @@
+.min_wrapper {
+  width: 1226px;
+  margin: 0 auto;
+}
+
+.clear_fix::after {
+  content: "";
+  display: block;
+  /* 伪类 、清除浮动解决高度塌陷的问题 */
+  clear: both;
+  height: 0;
+  visibility: hidden;
+}
+
+.clear_fix {
+  *zoom: 1
+}

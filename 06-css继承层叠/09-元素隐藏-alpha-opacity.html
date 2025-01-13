@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        /* alpha 只设置当前元素的透明度，不设置只元素的透明度 */
+        color: rgba(255, 0, 0, 0.5);
+      }
+
+      .content {
+        /* 设置透明度，并且会携带所有的子元素也一起设置透明度 */
+        opacity: 0.3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      我是box1
+      <img src="../0-images/gouwujie01.jpg" alt="" />
+    </div>
+    <div class="content">
+      我是content
+      <img src="../0-images//gouwujie01.jpg" alt="" />
+    </div>
+  </body>
+</html>

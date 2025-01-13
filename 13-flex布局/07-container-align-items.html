@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        width: 500px;
+        height: 500px;
+        background-color: orange;
+        /* padding: 0 10px; */
+        box-sizing: border-box;
+
+        display: flex;
+        /* align-items: 决定了flex items 在cross axis 方向上的对齐方式
+            mormal： 默认值， 在弹性布局中和stretch效果一致
+            stretch：当flex items 在cross axis方向的size为auto时，会自动拉伸至填充flex container
+            flex-start
+            flex-end
+            center
+            baseline: 基线对齐
+        */
+        align-items: baseline;
+      }
+      .item {
+        width: 120px;
+      }
+
+      .item1 {
+        height: 80px;
+        font-size: 30px;
+      }
+
+      .item2 {
+        height: 150px;
+        font-size: 40px;
+      }
+
+      .item3 {
+        height: 60px;
+        font-size: 14px;
+      }
+
+      .item4 {
+        height: 100px;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item item1">1x</div>
+      <div class="item item2">2x</div>
+      <div class="item item3">3x</div>
+      <div class="item item4">4x</div>
+    </div>
+
+    <script src="./js/itemRandomColor.js"></script>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      /* 块级元素可以设置宽高， 行内元素不能设置自己的宽高， 宽高根据内容的宽高 */
+      div {
+        background-color: #f00;
+        width: 200px;
+        height: 200px;
+      }
+
+      span {
+        background-color: #0f0;
+        width: 200px;
+        height: 200px;
+      }
+
+      img {
+        width: 200px;
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>我是div元素</div>
+    <span>我是span元素</span>
+
+    <!-- 特殊情况 -->
+    <!-- img元素是行内替换元素 -->
+    <img src="../0-images/gouwujie01.jpg" alt="" />
+  </body>
+</html>

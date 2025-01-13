@@ -1,0 +1,32 @@
+// 混入
+.nowrap_ellipsis {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+// 混入可以传参数
+.box_border(@borderWidth: 5px, @borderColor: red) {
+  border: @borderWidth solid @borderColor;
+}
+
+// 混入和映射(Map)结合使用
+.box_size {
+  width: 200px;
+  height: 200px;
+}
+
+.box1 {
+  width: 150px;
+  background-color: purple;
+  .nowrap_ellipsis();
+  .box_border();
+}
+
+.box2 {
+  // width: 120px;
+  width: .box_size()[width];
+  background-color: aqua;
+  .nowrap_ellipsis();
+  .box_border(10px, #0f0)
+}

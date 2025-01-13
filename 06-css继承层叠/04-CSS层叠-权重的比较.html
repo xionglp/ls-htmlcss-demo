@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>权重的比较</title>
+    <style>
+      /* 
+        权重： !important > 内联样式 > id > (类选择器、属性选择器、伪类) > （元素选择器、伪元素） > 通配选择器
+      */
+      div.box {
+        color: red !important;
+      }
+
+      #main {
+        color: aqua;
+      }
+
+      .box {
+        color: bisque;
+      }
+
+      div {
+        color: green;
+      }
+
+      * {
+        color: purple;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main" class="box one two" style="color: blue">我是div元素</div>
+  </body>
+</html>

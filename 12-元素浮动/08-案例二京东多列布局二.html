@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        width: 1190px;
+        margin: 0 auto;
+        background-color: antiquewhite;
+        /* height: 1000px; */
+      }
+
+      .wrapper {
+        margin-right: -10px;
+      }
+
+      .item {
+        width: 290px;
+        background-color: orange;
+        margin-bottom: 10px;
+        float: left;
+        margin-right: 10px;
+      }
+
+      /* 交集选择器 */
+      .item.left {
+        height: 370px;
+      }
+
+      .item.right {
+        height: 180px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrapper">
+        <div class="item left"></div>
+        <div class="item left"></div>
+        <div class="item right"></div>
+        <div class="item right"></div>
+        <div class="item right"></div>
+        <div class="item right"></div>
+      </div>
+    </div>
+  </body>
+</html>

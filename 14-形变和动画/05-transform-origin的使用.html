@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+
+      body {
+        text-align: center;
+        padding-top: 200px;
+      }
+
+      .container {
+        display: inline-block;
+        border: 10px solid #f00;
+      }
+
+      .box {
+        width: 200px;
+        height: 100px;
+        background-color: orange;
+        /* transform-origin 默认值为center center */
+        /* left top 左上角 */
+        /* transform-origin: left top; */
+        transform-origin: center top;
+      }
+
+      .box:hover {
+        /* 多个属性连在一起写 */
+        transform: scale(0.5, 0.5) rotate(-45deg);
+      }
+
+    </style>
+  </head>
+  <body>
+    <!-- transform-origin 形变的原点 -->
+
+    <div class="container">
+      <div class="box"></div>
+    </div>
+  </body>
+</html>

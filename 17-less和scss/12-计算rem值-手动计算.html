@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./js/ls_flexible.js"></script>
+    <style>
+
+      /* 假设以 375 为标准 */
+      /* 手动计算 100px 对应的是多少rem， （100 / 37.5 = 2.6667） */
+      .box {
+        width: 2.6667rem;
+        height: 2.6667rem;
+        background-color: orange;
+      }
+
+      p {
+        font-size: 0.42667rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+    <p>我是文本</p>
+  </body>
+</html>

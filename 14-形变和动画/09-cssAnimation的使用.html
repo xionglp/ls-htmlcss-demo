@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 200px;
+        height: 100px;
+        background-color: orange;
+
+        /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+
+        /* animation-name: moveAnimation;
+        animation-delay: 2s;
+        animation-timing-function: ease-in-out;
+        animation-duration: 2s;
+        animation-iteration-count: 2;
+        animation-direction: normal;
+        animation-fill-mode: forwards; */
+        
+        /* 缩写属性 */
+        animation: moveAnimation 2s ease-in-out 1s 1 normal forwards;
+
+      }
+
+      @keyframes moveAnimation {
+        0% {
+          transform: translate(0, 0) scale(1, 1);
+        }
+
+        33% {
+          transform: translate(0, 200px) scale(1.4, 1.4);
+        }
+
+        66% {
+          transform: translate(400px, 200px) scale(1, 1);
+        }
+
+        100% {
+          transform:  translate(400px, 0) scale(0.5, 0.5);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>
